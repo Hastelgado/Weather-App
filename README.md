@@ -10,7 +10,8 @@ The project's main feature/goal is to use an Autocomplete search bar to go over 
 * Using CSV files as the database in Python.
 * Building an **Auto-complete** search function.
 * Using API's.
-* Understanding CSS's Flexbox for front-end.
+* Understanding CSS's Flexbox.
+* Using Flask's Jinja HTML templating language.
 
 ## Obtaining your own API key.
 Visit <https://openweathermap.org/api> for instructions.
