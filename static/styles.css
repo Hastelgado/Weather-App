@@ -1,0 +1,564 @@
+
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+
+body {
+ xbackground-image: url("https://cdn.mos.cms.futurecdn.net/riZrG8uVoQwwA7FbW78Yh4.jpg");
+ xbackground-repeat: no-repeat;
+ xbackground-size: cover;
+ display:flex;
+ flex-flow: column;
+ height: 100vh;
+
+}
+
+
+header{
+    xmin-height: 10vh;
+    width: 100%;
+    xbackground-color: rgb(235, 28, 45);
+}
+ 
+
+nav{
+    display: flex;
+    padding: 2% 3%;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(rgb(255, 255, 255) 10%, rgba(255, 255, 255, 0));
+    xbackground-image: linear-gradient(rgba(255, 255, 255, 0) 40%, rgb(255, 255, 255) 0%);
+
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+#searchbarcontainer{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#subsearchbarcontainer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    visibility: hidden;
+}
+
+#undobtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: Transparent;
+}
+
+#undobtn i{
+    color: rgba(0, 0, 0, 0.753);
+}
+
+#searchbar{
+    width: 100%;
+    xmargin-right: 60px;
+    xbackground-color: aqua;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 10px;
+    height: 60px;
+    border-radius: 50px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 10px 5px rgba(0, 0, 0, 0.12)
+  ;
+
+}
+
+#searchbar form{
+    display: flex;
+    justify-content: center;
+}
+
+#searchinput{
+    width: 95%;
+    margin-left: 50px;
+    line-height: 58px;
+    font-size: 22px;
+    border: none;
+    background: none;
+    outline: none;
+    text-align:left;
+    color: white;
+}
+
+#searchbutton {
+    margin-left: 5px;
+    margin-top: 12px;
+    margin-right: 30px;
+}
+
+#topautocomplete{
+    xbackground-color: aqua;
+    background-color: rgba(0, 0, 0, 0.7);
+    min-width: 42%;
+    margin-top: 58px;
+    margin-left: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    overflow-y: auto;
+    xoverflow-x: hidden;
+    max-height: 400px;
+    xheight: fit-content;
+}
+
+.topautolink{
+    xbackground-color: aqua;
+    width: 100%;
+    height: 75px;
+    height: 100%;
+    xmin-height: 75px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.topautolink:first-child {
+    xpadding-top: 50px;
+  }
+
+.topautolink i {
+    background-color: rgba(0, 0, 0, 0.25);
+    color:gainsboro;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 5px;
+    
+}
+
+.topautolink input{
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-align: start;
+    color: gainsboro;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 6px;
+    font-size: 22px;
+    transition: all 0.1s ease-in-out;
+    border: none;
+}
+
+.topautolink input:hover{
+    background-color: rgba(255, 255, 255, 0.247);
+    color: white;
+}
+
+footer {
+    xbackground-color: rgb(69, 245, 33);
+    xmin-height: 10vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 40%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    min-height: 100px;
+}
+
+footer p{
+    font-size: 16px;
+    color: white;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: row-reverse;
+    min-width: 60%;
+    justify-content: space-between;
+
+}
+
+.footer-links .links{
+    display: flex;
+    gap: 15px;
+    margin-right: 420px;
+}
+
+.footer-links .links a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-links .social-links{
+    display: flex;
+    gap: 20px;
+
+}
+
+.footer-links .social-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+}
+
+main{
+    xbackground-color: aqua;
+    xmin-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+
+#mainsearchbar{
+    width: 55%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 10px;
+    height: 90px;
+    border-radius: 50px;
+    margin-top: 200px;
+
+}
+
+#mainsearchbar form{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 10px 5px rgba(0, 0, 0, 0.12)
+  ;
+}
+
+#mainsearchinput{
+    xbackground-color: aquamarine;
+    width: 95%;
+    margin-left: 50px;
+    line-height: 75px;
+    font-size: 22px;
+    color: white;
+    border: none;
+    background: none;
+    outline: none;
+    xtext-align:left;
+}
+
+
+.hover{
+    transition: all 0.1s ease-in-out;
+}
+
+.hover:hover{
+    transform: scale(1.1);
+}
+
+.ddown{
+    transition: all 0.1s ease-in-out;
+    padding: 4px;
+}
+
+.ddown:hover{
+    box-shadow: inset 0 0 0 2em rgba(255, 255, 255, 0.253);
+    border-radius: 5px;
+    
+}
+
+#autocomplete{
+    xbackground-color: aqua;
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 50%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto;
+    xoverflow-x: hidden;
+    max-height: 350px;
+    xheight: fit-content;
+    
+}
+
+/* width */
+#autocomplete::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+/* Track */
+#autocomplete::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+/* Handle */
+#autocomplete::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+/* Handle on hover */
+#autocomplete::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+.autolink{
+    xbackground-color: aqua;
+    width: 100%;
+    height: 75px;
+    xmin-height: 75px;
+    
+}
+
+.autolink form{
+    height: 100%;
+}
+
+.autolink form input{
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-align: start;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 12px;
+    font-size: 18px;
+    transition: all 0.1s ease-in-out;
+    border: none;
+}
+
+.autolink form input:hover{
+    background-color: rgba(0, 0, 0, 0.397);
+    color: white;
+}
+
+/* --------------------------- weather.html css below ----------------------------------*/
+
+#maincontainer{
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 60%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.253);
+    border-radius: 15px;
+    padding: 15px;
+    flex-grow: 1;
+    max-height: 670px;
+    gap: 10px;
+    overflow-y: auto;
+
+}
+
+.weatherdiv{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.smallerweatherdiv{
+    background-color: white;
+    width: 100%;
+    max-height: 117px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-left: 10px;
+    border-radius: 15px;
+    xbox-shadow: rgba(255, 255, 255, 0.795) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(0, 0, 0, 0.35) 0px -2px 6px 0px inset;
+}
+
+.weatherimage{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.weatherimage img{
+    width: 100px;
+    height: auto;
+    border: #f1f1f1 solid;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.514);
+}
+
+.weathertemp{
+    font-weight: 550;
+    font-size: 18px;
+}
+
+.windflex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.windflextext{
+    font-weight: 550;
+}
+
+.windflextext span{
+    color: rgb(236, 111, 76);
+}
+
+.weathername span{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.weathername img{
+    width: 20px;
+    height: auto;
+    margin-left: 5px;
+    margin-bottom: 4px;
+}
+
+.weathermisc{
+    display: flex;
+    flex-direction: column;
+}
+
+.weathermisc h5{
+    font-weight: 550;
+}
+
+.weathermisc h6{
+    font-weight: 550;
+    text-transform:capitalize;
+}
+
+#toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+#toggle i{
+    color: rgb(236, 111, 76)
+}
+
+#toggleon{
+    border: none;
+    background-color: Transparent;
+    display: none;
+
+
+}
+
+#toggleoff{
+    border: none;
+    background-color: Transparent;
+
+}
+
+#toggleon i{
+    color: rgba(255, 255, 255, 0.747);
+
+}
+
+#toggleoff i{
+    color: rgba(0, 0, 0, 0.753);
+
+}
+
+.celcius{
+    display: block;
+}
+
+.fahrenheit{
+    display: none;
+}
+
+.celcius span{
+    color: rgb(236, 111, 76);
+}
+
+.fahrenheit span{
+    color: rgb(236, 111, 76);
+}
+
+#blackAlertPlaceholder{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#blackscreen{
+    border:rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.514);
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 70px;
+    right: 300px;
+    left: 100px;
+    width: 640px;
+    height:40px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#blackscreen div{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.767);
+}
+
+#blackscreen button{
+    color: #f1f1f1;
+    margin-top: 4px;
+}

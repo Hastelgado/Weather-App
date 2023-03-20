@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Weather Forecast
+{% endblock %}
+
+{% block main %}
+    <div id="maincontainer">
+        <div class="weatherdiv">
+            <div class="smallerweatherdiv">
+                <div class="weathername">
+                    <span>{{name}}, {{countryupper}}</span>
+                    <img src="https://openweathermap.org/images/flags/{{countrylower}}.png">
+                </div>
+                <div class="weathertemp">
+                    <span class="celcius">around <span>{{celcius}}°C</span></span>
+                    <span class="fahrenheit">around <span>{{fahrenheit}}°F</span></span>
+                </div>
+                <div class="weatherimage">
+                    <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png">
+                    <div class="windflex">
+                        <span class="windflextext">Wind: <span>{{direction}}</span> {{speed}}m/s</span>
+                        <i style="transform: rotate({{deg}}deg);" class="fa-solid fa-location-arrow"></i>
+                    </div>
+                </div>
+                <div class="weathermisc">
+                    <h5>Forecast: {{main}}</h5>
+                    <h6>{{description}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
